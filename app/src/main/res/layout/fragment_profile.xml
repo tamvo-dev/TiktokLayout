@@ -30,14 +30,56 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent">
 
-                <ImageView
+                <ImageButton
+                    android:background="@android:color/transparent"
                     android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="20dp"
                     android:src="@drawable/ic_menu_black_24dp"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginRight="20dp"
+            android:id="@+id/profile_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/girl"/>
+
+        <Button
+            android:layout_gravity="center"
+            android:background="@color/colorAccent"
+            android:textColor="@android:color/white"
+            android:text="Sửa hồ sơ"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="50dp"/>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/adduser"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="5dp"/>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/qrcode"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+
 
     <TextView
         android:text="Nguyễn Viết Hưng"
