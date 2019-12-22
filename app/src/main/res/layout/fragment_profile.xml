@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="#472E2E"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <LinearLayout
+            android:paddingTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:background="@android:color/transparent"
+                android:layout_weight="50"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Tùy chỉnh ảnh bìa của bạn"/>
+
+            <LinearLayout
+                android:gravity="right"
+                android:layout_weight="50"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_menu_black_24dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:text="Nguyễn Viết Hưng"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:paddingLeft="20dp"
+        android:paddingVertical="10dp"
+        android:textColor="#111"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tên người dùng: user123"
+        android:textStyle="bold"
+        android:paddingLeft="20dp"/>
+
+    <View
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/back"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#111"
+        android:textSize="16sp"
+        android:text="Nhấn để thêm vào hồ sơ của bạn..."
+        android:paddingLeft="20dp"
+        android:paddingVertical="5dp"/>
+
+    <LinearLayout
+        android:paddingVertical="5dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="0 Thích"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="0 Đang Follow"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="0 Follower"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/back"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:paddingVertical="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Video 0"
+            android:layout_weight="1"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:background="@color/back"/>
+
+        <TextView
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Thích 0"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/back"/>
+
+
+</LinearLayout>
