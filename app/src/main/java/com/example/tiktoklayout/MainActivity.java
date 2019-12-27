@@ -1,9 +1,12 @@
 package com.example.tiktoklayout;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
@@ -40,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case R.id.nav_createVideo:
+                        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+                        startActivityForResult(intent, 0);
                         break;
 
                     case R.id.nav_inbox:
@@ -55,5 +60,10 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }
