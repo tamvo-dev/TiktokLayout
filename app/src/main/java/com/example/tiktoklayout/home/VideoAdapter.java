@@ -1,26 +1,22 @@
-package com.example.tiktoklayout.music;
+package com.example.tiktoklayout.home;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.example.tiktoklayout.R;
+import com.google.android.exoplayer2.SimpleExoPlayer;
 
-public class SongAdapter extends RecyclerView.Adapter<SongAdapter.MyViewHolder> {
-
-    private List<SongModel> songModels;
-
-    public SongAdapter(){
-        songModels = new ArrayList<>();
-    }
+public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.MyViewHolder> {
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;//new MyViewHolder();
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_viewpager, parent, false);
+        return new MyViewHolder(view);
     }
 
     @Override
@@ -30,11 +26,12 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.MyViewHolder> 
 
     @Override
     public int getItemCount() {
-        return songModels.size();
+        return 2;
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder{
-        public MyViewHolder(View itemView){
+
+        MyViewHolder(View itemView){
             super(itemView);
         }
     }

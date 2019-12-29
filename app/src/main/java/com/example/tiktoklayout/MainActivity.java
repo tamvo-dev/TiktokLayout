@@ -6,11 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.example.tiktoklayout.discover.DiscoverFragment;
+import com.example.tiktoklayout.home.HomeFragment;
+import com.example.tiktoklayout.inbox.InBoxFragment;
+import com.example.tiktoklayout.profile.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
