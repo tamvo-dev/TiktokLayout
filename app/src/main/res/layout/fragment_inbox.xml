@@ -27,10 +27,11 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/tiktok"/>
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/followers"/>
             <TextView
+                android:textColor="@android:color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Follower"/>
@@ -44,10 +45,11 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/tiktok"/>
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/like"/>
             <TextView
+                android:textColor="@android:color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Thích"/>
@@ -61,10 +63,11 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/tiktok"/>
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/user"/>
             <TextView
+                android:textColor="@android:color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nhắc đến"/>
@@ -78,10 +81,11 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/tiktok"/>
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/comment"/>
             <TextView
+                android:textColor="@android:color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bình luận"/>

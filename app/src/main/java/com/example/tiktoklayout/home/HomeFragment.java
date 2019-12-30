@@ -1,6 +1,7 @@
 package com.example.tiktoklayout.home;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.tiktoklayout.MainActivity;
 import com.example.tiktoklayout.R;
 
 public class HomeFragment extends Fragment {
@@ -24,6 +26,10 @@ public class HomeFragment extends Fragment {
         viewPager2.setOrientation(ViewPager2.ORIENTATION_VERTICAL);
         VideoAdapter adapter  = new VideoAdapter();
         viewPager2.setAdapter(adapter);
+
+        //String packageName = ((MainActivity) getActivity()).getPackageName();
+        //Log.e("TAG", packageName);
+
         return view;
     }
 }

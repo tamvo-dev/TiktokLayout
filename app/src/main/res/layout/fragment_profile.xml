@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:background="#472E2E"
+        android:background="#231530"
         android:layout_width="match_parent"
         android:layout_height="150dp">
 
@@ -20,6 +20,7 @@
             <Button
                 android:background="@android:color/transparent"
                 android:layout_weight="50"
+                android:textColor="@android:color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Tùy chỉnh ảnh bìa của bạn"/>

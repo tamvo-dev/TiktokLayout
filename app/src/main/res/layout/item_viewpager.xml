@@ -1,41 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@android:color/white"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <com.google.android.exoplayer2.ui.PlayerView
         android:id="@+id/item_videoplayer"
         android:layout_width="match_parent"
-        android:minHeight="200dp"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
 
     <LinearLayout
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:paddingBottom="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="/@Thanh Thao"/>
+            android:text="\@Thanh Thao"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:paddingBottom="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Đã bảo không đồng ý"/>
+            android:text="Đã bảo không đồng ý"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Âm thanh g"/>
+            android:text="Âm thanh gốc"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
 
     </LinearLayout>
 

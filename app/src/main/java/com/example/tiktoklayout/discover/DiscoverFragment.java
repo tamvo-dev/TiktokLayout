@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.tiktoklayout.R;
 
@@ -23,7 +24,7 @@ public class DiscoverFragment extends Fragment {
         View view = LayoutInflater.from(container.getContext()).inflate(R.layout.fragment_discover, container, false);
         RecyclerView recyclerViewOne = view.findViewById(R.id.recyclerViewOne);
         RecyclerView recyclerViewTwo = view.findViewById(R.id.recyclerViewTwo);
-        RecyclerView recyclerViewTop = view.findViewById(R.id.recyclerViewTop);
+        ViewPager2 viewPager2 = view.findViewById(R.id.discover_viewpager2);
 
         DiscoverAdapter adapter = new DiscoverAdapter();
         DiscoverTopAdapter topAdapter = new DiscoverTopAdapter();
@@ -36,10 +37,10 @@ public class DiscoverFragment extends Fragment {
 
         recyclerViewOne.setAdapter(adapter);
         recyclerViewTwo.setAdapter(adapter);
-        recyclerViewTop.setAdapter(topAdapter);
+        viewPager2.setAdapter(topAdapter);
         recyclerViewOne.setLayoutManager(linearLayoutManagerOne);
         recyclerViewTwo.setLayoutManager(linearLayoutManagerTwo);
-        recyclerViewTop.setLayoutManager(linearLayoutManagerTop);
+        viewPager2.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
         return view;
     }
 }
