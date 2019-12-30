@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,9 +28,7 @@ public class HomeFragment extends Fragment {
         VideoAdapter adapter  = new VideoAdapter();
         viewPager2.setAdapter(adapter);
 
-        //String packageName = ((MainActivity) getActivity()).getPackageName();
-        //Log.e("TAG", packageName);
-
         return view;
     }
+
 }
