@@ -37,6 +37,7 @@ import java.io.File;
 public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.MyViewHolder> {
 
     private Context context;
+    private int position;
 
     @NonNull
     @Override
@@ -49,20 +50,31 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.MyViewHolder
     @Override
     public void onViewAttachedToWindow(@NonNull MyViewHolder holder) {
         super.onViewAttachedToWindow(holder);
-
         holder.player.setPlayWhenReady(true);
     }
 
     @Override
     public void onViewDetachedFromWindow(@NonNull MyViewHolder holder) {
         super.onViewDetachedFromWindow(holder);
-
         holder.player.setPlayWhenReady(false);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.bindView(context);
+        this.position = position;
+
+        if (position == 0){
+            holder.bindView(context, "http://cbsnewshd-lh.akamaihd.net/i/CBSNHD_7@199302/index_700_av-p.m3u8");
+        } else {
+            holder.bindView(context,"http://54.255.155.24:1935//Live/_definst_/amlst:sweetbcha1novD235L240P/playlist.m3u8");
+        }
+
+    }
+
+    @Override
+    public void onDetachedFromRecyclerView(@NonNull RecyclerView recyclerView) {
+        super.onDetachedFromRecyclerView(recyclerView);
+
     }
 
     @Override
@@ -78,7 +90,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.MyViewHolder
             super(itemView);
         }
 
-        public void bindView(Context context){
+        public void bindView(Context context, String url){
 
             PlayerView playerView = itemView.findViewById(R.id.item_videoplayer);
 
@@ -92,7 +104,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.MyViewHolder
             playerView.requestFocus();
             playerView.setPlayer(player);
 
-            Uri mp4VideoUri =Uri.parse("http://cbsnewshd-lh.akamaihd.net/i/CBSNHD_7@199302/index_700_av-p.m3u8");
+            Uri mp4VideoUri =Uri.parse(url);
             DataSource.Factory dataSourceFactory = new DefaultDataSourceFactory(context, Util.getUserAgent(context, "tiktoklayout"), bandwidthMeter);
             MediaSource mediaSource = new HlsMediaSource(mp4VideoUri, dataSourceFactory, 1, null, null);
 

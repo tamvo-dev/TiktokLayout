@@ -18,17 +18,25 @@ import com.example.tiktoklayout.R;
 
 public class HomeFragment extends Fragment {
 
+    private ViewPager2 viewPager2;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = LayoutInflater.from(container.getContext()).inflate(R.layout.fragment_home, container, false);
-        ViewPager2 viewPager2 = view.findViewById(R.id.home_fragment_viewpager);
-        viewPager2.setOrientation(ViewPager2.ORIENTATION_VERTICAL);
         VideoAdapter adapter  = new VideoAdapter();
+
+        viewPager2 = view.findViewById(R.id.home_fragment_viewpager);
+        viewPager2.setOrientation(ViewPager2.ORIENTATION_VERTICAL);
         viewPager2.setAdapter(adapter);
 
         return view;
     }
 
+    @Override
+    public void onDestroy() {
+        viewPager2.setAdapter(null);
+        super.onDestroy();
+    }
 }
